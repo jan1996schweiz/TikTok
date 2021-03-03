@@ -1,38 +1,49 @@
-package ch.tiktok;
+package Test;
+
+import java.util.Scanner;
+
+public class TestClassT {
+
+    public static void main(String[] args) {
 
 
-public class Field {
 
-    //Attribute
-    private char[][] field;
+        Scanner sc = new Scanner(System.in);
 
-    //Konstruktor
-    Field() {
-        field = new char[6][11];
+        System.out.println("x beginnt");
+
+        SetX = setX();
+
+        //char[][] fieldG = fieldGame();
+
+
+
     }
 
-    //Methoden
+
+    public void setX() {
+        char[][] fieldG = fieldGame();
+        char player1 = 'x';
 
 
-    //GetterSetter
 
-    public char[][] getField() {
-        return field;
+
+
+
     }
 
-    public void setField(char[][] field) {
-        this.field = field;
-    }
 
-    public void buildField() {
-        //Abgrenzung an denn Seiten
+    public static char[][] fieldGame() {
 
 
-        field[0][0] = ' ';
+        char[][] field = new char[6][11];
+
+
+        field[0][0] = '1';
         field[1][0] = '_';
-        field[2][0] = ' ';
+        field[2][0] = '4';
         field[3][0] = '_';
-        field[4][0] = ' ';
+        field[4][0] = '7';
         field[5][0] = ' ';
 
         field[0][1] = ' ';
@@ -63,11 +74,11 @@ public class Field {
         field[4][4] = ' ';
         field[5][4] = ' ';
 
-        field[0][5] = ' ';
+        field[0][5] = '2';
         field[1][5] = '_';
-        field[2][5] = ' ';
+        field[2][5] = '5';
         field[3][5] = '_';
-        field[4][5] = ' ';
+        field[4][5] = '8';
         field[5][5] = ' ';
 
         field[0][6] = ' ';
@@ -98,30 +109,22 @@ public class Field {
         field[4][9] = ' ';
         field[5][9] = ' ';
 
-        field[0][10] = ' ';
+        field[0][10] = '3';
         field[1][10] = '_';
-        field[2][10] = ' ';
+        field[2][10] = '6';
         field[3][10] = '_';
-        field[4][10] = ' ';
+        field[4][10] = '9';
         field[5][10] = ' ';
 
 
-
-
-
-    }
-
-    public void printField() {
-
-        for(int i = 0; i < field.length; i++) {
-            for(int j = 0; j < field[i].length; j++) {
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
                 System.out.print(field[i][j]);
             }
             System.out.println();
         }
-
+    return field;
     }
-
 
 
 }
